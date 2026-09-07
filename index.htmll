@@ -174,7 +174,7 @@
           <!-- มหาวิทยาลัยที่ 2 -->
           <div class="uni-card">
             <div class="img-box">
-              <img src="IMG_0962.jpeg" alt="มหาวิทยาลัยบูรพา" class="portfolio-img">
+              <img src="IMG_0962.jpeg" alt="มหาวิทยาลัยธรรมศาสตร์" class="portfolio-img">
             </div>
             <div class="uni-info">
               <span class="badge highlight">เป้าหมายทางการศึกษา</span>
@@ -204,9 +204,9 @@
     <div class="footer-content">
       <h3>ช่องทางการติดต่อ</h3>
       <div class="contact-grid">
-        <p><strong>Instagram:</strong> <a href="https://instagram.com/kaemonelove" target="_blank">kaemonelove</a></p>
-        <p><strong>Facebook:</strong> <a href="https://facebook.com" target="_blank">Nxchy</a></p>
-        <p><strong>Gmail:</strong> <a href="mailto:s34414@banbung.ac.th">s34414@banbung.ac.th</a> | <a href="mailto:nichanannetsopha28@gmail.com">nichanannetsopha28@gmail.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/aut_tap.n" target="_blank">aut_tap.n</a></p>
+        <p><strong>Facebook:</strong> <a href="https://facebook.com" target="_blank">Auttapon Rangsom</a></p>
+        <p><strong>Gmail:</strong> <a href="mailto:s34409@banbung.ac.th">s34409@banbung.ac.th</a> | <a href="mailto:vy1288213@gmail.com">vy1288213@gmail.com</a></p>
       </div>
       <p class="copyright">&copy; <span id="year"></span> Nichanan Netsopha. All rights reserved.</p>
     </div>
