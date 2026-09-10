@@ -10,16 +10,13 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
     <style>
-
-        /* =========================
-           RESET
-        ========================= */
 
         * {
             margin: 0;
@@ -33,14 +30,14 @@
 
         body {
             font-family: "Kanit", sans-serif;
-            background-color: #f5f7fb;
+            background: #f5f7fb;
             color: #222;
             line-height: 1.7;
         }
 
 
         /* =========================
-           NAVIGATION BAR
+           NAVIGATION
         ========================= */
 
         nav {
@@ -58,7 +55,6 @@
 
         .nav-container {
             max-width: 1200px;
-
             margin: auto;
 
             padding: 12px 20px;
@@ -68,13 +64,11 @@
             align-items: center;
 
             flex-wrap: wrap;
-
             gap: 7px;
         }
 
         .nav-container a {
             color: #333;
-
             text-decoration: none;
 
             padding: 8px 14px;
@@ -87,7 +81,7 @@
         }
 
         .nav-container a:hover {
-            background-color: #1d3557;
+            background: #1d3557;
             color: white;
 
             transform: translateY(-2px);
@@ -145,7 +139,6 @@
 
         .home h1 {
             font-size: clamp(35px, 6vw, 65px);
-
             margin-bottom: 10px;
         }
 
@@ -154,14 +147,13 @@
 
             font-weight: 400;
 
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .home p {
             font-size: 20px;
 
             margin-top: 20px;
-
             margin-bottom: 30px;
         }
 
@@ -172,22 +164,19 @@
 
             border-radius: 30px;
 
-            background-color: white;
-
+            background: white;
             color: #222;
 
             text-decoration: none;
 
             font-size: 18px;
-
             font-weight: 500;
 
             transition: 0.3s;
         }
 
         .portfolio-btn:hover {
-            background-color: #222;
-
+            background: #222;
             color: white;
 
             transform: translateY(-3px);
@@ -195,7 +184,7 @@
 
 
         /* =========================
-           GENERAL SECTION
+           GENERAL
         ========================= */
 
         section {
@@ -222,14 +211,13 @@
             display: block;
 
             width: 75px;
-
             height: 4px;
 
             margin: 12px auto 0;
 
             border-radius: 5px;
 
-            background-color: #457b9d;
+            background: #457b9d;
         }
 
 
@@ -244,12 +232,30 @@
 
             padding: 40px;
 
-            background-color: white;
+            background: white;
 
             border-radius: 20px;
 
             box-shadow:
                 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .about-photo {
+            display: block;
+
+            width: 180px;
+            height: 180px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            margin: 0 auto 30px;
+
+            border: 5px solid #457b9d;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
         .about-card h3 {
@@ -280,8 +286,6 @@
 
         .school-name {
             font-size: 19px;
-
-            color: #333;
         }
 
 
@@ -301,7 +305,7 @@
         .hobby-card {
             overflow: hidden;
 
-            background-color: white;
+            background: white;
 
             border-radius: 18px;
 
@@ -344,7 +348,7 @@
 
             padding: 9px 20px;
 
-            background-color: #ff0000;
+            background: #ff0000;
 
             color: white;
 
@@ -356,9 +360,7 @@
         }
 
         .youtube-btn:hover {
-            background-color: #cc0000;
-
-            transform: translateY(-2px);
+            background: #cc0000;
         }
 
 
@@ -367,7 +369,7 @@
         ========================= */
 
         .activity {
-            background-color: white;
+            background: white;
 
             padding: 25px;
 
@@ -390,7 +392,7 @@
 
             border-radius: 15px;
 
-            background-color: #f1f1f1;
+            background: #f1f1f1;
         }
 
         .activity p {
@@ -422,7 +424,7 @@
         .university-card {
             overflow: hidden;
 
-            background-color: white;
+            background: white;
 
             border-radius: 20px;
 
@@ -468,7 +470,7 @@
 
             padding: 40px;
 
-            background-color: white;
+            background: white;
 
             border-radius: 20px;
 
@@ -524,7 +526,7 @@
 
             color: white;
 
-            background-color: #1d3557;
+            background: #1d3557;
         }
 
 
@@ -545,7 +547,6 @@
 
             .nav-container a {
                 padding: 7px 9px;
-
                 font-size: 13px;
             }
 
@@ -569,6 +570,7 @@
             .home p {
                 font-size: 17px;
             }
+
         }
 
     </style>
@@ -579,9 +581,9 @@
 <body>
 
 
-    <!-- ==========================================
+    <!-- =====================================
          NAVIGATION
-    =========================================== -->
+    ====================================== -->
 
     <nav>
 
@@ -617,20 +619,20 @@
 
 
 
-    <!-- ==========================================
+    <!-- =====================================
          HOME
-    =========================================== -->
+    ====================================== -->
 
     <section id="home" class="home">
 
         <div class="home-content">
 
 
-            <!-- รูปโปรไฟล์ -->
+            <!-- Auttapon.jpg -->
 
             <img
                 src="Auttapon.jpg"
-                alt="อัตพล ร่างสม"
+                alt="รูปของอัตพล ร่างสม"
                 class="profile-home"
             >
 
@@ -652,7 +654,7 @@
 
             <p>
                 ขณะนี้กำลังศึกษาสายการเรียน
-                Computer Science & Engineering
+                Computer Science &amp; Engineering
             </p>
 
 
@@ -669,9 +671,9 @@
 
 
 
-    <!-- ==========================================
+    <!-- =====================================
          ABOUT
-    =========================================== -->
+    ====================================== -->
 
     <section id="about">
 
@@ -681,6 +683,15 @@
 
 
         <div class="about-card">
+
+
+            <!-- IMG_7687.jpeg -->
+
+            <img
+                src="IMG_7687.jpeg"
+                alt="รูปของอัตพล ร่างสม"
+                class="about-photo"
+            >
 
 
             <h3>
@@ -755,15 +766,15 @@
 
 
 
-    <!-- ==========================================
+    <!-- =====================================
          HOBBY
-    =========================================== -->
+    ====================================== -->
 
     <section id="hobby">
 
 
         <h2 class="section-title">
-            งานอดิเรก & สิ่งที่ชื่นชอบ
+            งานอดิเรก &amp; สิ่งที่ชื่นชอบ
         </h2>
 
 
@@ -774,11 +785,14 @@
 
             <div class="hobby-card">
 
+
                 <div class="hobby-card-content">
+
 
                     <h3>
                         🎵 เพลงที่ชอบ
                     </h3>
+
 
                     <p>
                         ความเชื่อ - bodyslam
@@ -788,10 +802,12 @@
                     <a
                         href="https://www.youtube.com/results?search_query=ความเชื่อ+bodyslam"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="youtube-btn"
                     >
                         🎧 ฟังเพลงบน YouTube
                     </a>
+
 
                 </div>
 
@@ -805,20 +821,23 @@
 
 
                 <img
-                    src="IMG_9038.png"
+                    src="IMG_9038.jpeg"
                     alt="เซียนหรั่งเดอะมูฟวี่"
                 >
 
 
                 <div class="hobby-card-content">
 
+
                     <h3>
                         🎬 หนังที่ชอบ
                     </h3>
 
+
                     <p>
                         เซียนหรั่งเดอะมูฟวี่
                     </p>
+
 
                 </div>
 
@@ -832,20 +851,23 @@
 
 
                 <img
-                    src="IMG_9040.png"
+                    src="IMG_9040.webp"
                     alt="Bodyslam"
                 >
 
 
                 <div class="hobby-card-content">
 
+
                     <h3>
                         🎤 วงดนตรีที่ชอบ
                     </h3>
 
+
                     <p>
                         Bodyslam
                     </p>
+
 
                 </div>
 
@@ -858,9 +880,9 @@
 
 
 
-    <!-- ==========================================
+    <!-- =====================================
          ACTIVITIES
-    =========================================== -->
+    ====================================== -->
 
     <section id="activities">
 
@@ -906,8 +928,8 @@
 
 
             <img
-                src="IMG_9037.png"
-                alt="การฝึกอบรมตามหลักสูตรทักษะการเผชิญเหตุแผ่นดินไหวและภัยพิบัติในสถานศึกษา"
+                src="IMG_9037.jpeg"
+                alt="การอบรมเชิงปฏิบัติการด้านความปลอดภัย"
             >
 
 
@@ -936,9 +958,9 @@
 
 
 
-    <!-- ==========================================
+    <!-- =====================================
          EDUCATION
-    =========================================== -->
+    ====================================== -->
 
     <section id="education">
 
@@ -996,9 +1018,9 @@
 
 
 
-    <!-- ==========================================
+    <!-- =====================================
          CONTACT
-    =========================================== -->
+    ====================================== -->
 
     <section id="contact">
 
@@ -1101,9 +1123,9 @@
 
 
 
-    <!-- ==========================================
+    <!-- =====================================
          FOOTER
-    =========================================== -->
+    ====================================== -->
 
     <footer>
 
