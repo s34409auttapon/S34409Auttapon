@@ -1,1 +1,713 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อัตพล ร่างสม | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Kanit", sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        /* ---------------- NAVBAR ---------------- */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 12px 20px;
+            gap: 8px;
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 15px;
+            border-radius: 25px;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        .nav-container a:hover {
+            background: #222;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ---------------- HOME ---------------- */
+
+        .home {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                linear-gradient(135deg, #1d3557, #457b9d);
+            color: white;
+        }
+
+        .home-content {
+            max-width: 850px;
+        }
+
+        .profile-home {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+            margin-bottom: 25px;
+        }
+
+        .home h1 {
+            font-size: clamp(35px, 6vw, 65px);
+            margin-bottom: 5px;
+        }
+
+        .home h2 {
+            font-size: clamp(24px, 4vw, 40px);
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .home p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-btn {
+            display: inline-block;
+            background: white;
+            color: #222;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .portfolio-btn:hover {
+            background: #222;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ---------------- GENERAL ---------------- */
+
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 50px;
+            color: #1d3557;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: #457b9d;
+            margin: 12px auto 0;
+            border-radius: 5px;
+        }
+
+        /* ---------------- ABOUT ---------------- */
+
+        .about-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .about-card h3 {
+            color: #1d3557;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        .about-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 30px;
+        }
+
+        .about-info div {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .about-info strong {
+            color: #1d3557;
+        }
+
+        /* ---------------- HOBBY ---------------- */
+
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .hobby-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .hobby-card img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+        }
+
+        .hobby-card-content {
+            padding: 22px;
+        }
+
+        .hobby-card h3 {
+            color: #1d3557;
+            margin-bottom: 10px;
+        }
+
+        .youtube-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+        }
+
+        /* ---------------- ACTIVITIES ---------------- */
+
+        .activity {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .activity img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+            border-radius: 15px;
+            background: #f1f1f1;
+        }
+
+        .activity p {
+            margin-top: 18px;
+            font-size: 18px;
+        }
+
+        /* ---------------- UNIVERSITY ---------------- */
+
+        .university-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .university-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .university-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .university-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .university-card p {
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            color: #1d3557;
+        }
+
+        /* ---------------- CONTACT ---------------- */
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 18px;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            font-size: 28px;
+            width: 45px;
+            text-align: center;
+        }
+
+        .contact-item a {
+            color: #1d3557;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+
+        footer {
+            text-align: center;
+            background: #1d3557;
+            color: white;
+            padding: 25px;
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+
+        @media (max-width: 800px) {
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+
+            .hobby-grid,
+            .university-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                gap: 3px;
+            }
+
+            .nav-container a {
+                font-size: 13px;
+                padding: 7px 10px;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+
+            .about-card,
+            .contact-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+        <div class="nav-container">
+            <a href="#home">หน้าแรก</a>
+            <a href="#about">เกี่ยวกับฉัน</a>
+            <a href="#hobby">งานอดิเรก & สิ่งที่ชื่นชอบ</a>
+            <a href="#activities">กิจกรรมที่เข้าร่วม</a>
+            <a href="#education">ความสนใจในด้านการศึกษาต่อ</a>
+            <a href="#contact">ช่องทางการติดต่อ</a>
+        </div>
+    </nav>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="home">
+        <div class="home-content">
+
+            <img
+                src="Auttapon.jpg"
+                alt="รูปของอัตพล ร่างสม"
+                class="profile-home"
+            >
+
+            <h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน</h1>
+
+            <h2>สวัสดีครับ! ผมชื่อ นายอัตพล ร่างสม</h2>
+
+            <h2>Auttapon Rangsom</h2>
+
+            <p>
+                ขณะนี้กำลังศึกษาสายการเรียน Computer Science & Engineering
+            </p>
+
+            <a href="#about" class="portfolio-btn">
+                👉 ดูแฟ้มผลงานของผม
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <h2 class="section-title">เกี่ยวกับฉัน</h2>
+
+        <div class="about-card">
+
+            <h3>ข้อมูลส่วนตัว</h3>
+
+            <div class="about-info">
+
+                <div>
+                    <strong>ชื่อ-นามสกุล:</strong>
+                    อัตพล ร่างสม
+                </div>
+
+                <div>
+                    <strong>ชื่อเล่น:</strong>
+                    เฟรม
+                </div>
+
+                <div>
+                    <strong>ระดับชั้น:</strong>
+                    ม.6/6
+                </div>
+
+                <div>
+                    <strong>เลขที่:</strong>
+                    6
+                </div>
+
+                <div>
+                    <strong>วันเกิด:</strong>
+                    2 ตุลาคม 2551
+                </div>
+
+            </div>
+
+            <h3 style="margin-top:35px;">
+                สถาบันการศึกษาปัจจุบัน
+            </h3>
+
+            <p>
+                โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOBBY ================= -->
+
+    <section id="hobby">
+
+        <h2 class="section-title">
+            งานอดิเรก & สิ่งที่ชื่นชอบ
+        </h2>
+
+        <div class="hobby-grid">
+
+            <!-- เพลง -->
+
+            <div class="hobby-card">
+
+                <div class="hobby-card-content">
+
+                    <h3>🎵 เพลงที่ชอบ</h3>
+
+                    <p>
+                        เพลง ความเชื่อ - bodyslam
+                    </p>
+
+                    <a
+                        href="https://www.youtube.com/results?search_query=ความเชื่อ+bodyslam"
+                        target="_blank"
+                        class="youtube-btn"
+                    >
+                        🎧 ฟังเพลงบน YouTube
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- หนัง -->
+
+            <div class="hobby-card">
+
+                <img
+                    src="IMG_9038.jpg"
+                    alt="เซียนหรั่งเดอะมูฟวี่"
+                >
+
+                <div class="hobby-card-content">
+
+                    <h3>🎬 หนังที่ชอบ</h3>
+
+                    <p>
+                        เซียนหรั่งเดอะมูฟวี่
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- วงดนตรี -->
+
+            <div class="hobby-card">
+
+                <img
+                    src="IMG_9040.jpg"
+                    alt="Bodyslam"
+                >
+
+                <div class="hobby-card-content">
+
+                    <h3>🎤 วงดนตรีที่ชอบ</h3>
+
+                    <p>
+                        Bodyslam
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACTIVITIES ================= -->
+
+    <section id="activities">
+
+        <h2 class="section-title">
+            กิจกรรมที่เข้าร่วม
+        </h2>
+
+
+        <!-- กิจกรรมที่ 1 -->
+
+        <div class="activity">
+
+            <img
+                src="IMG_8936.jpg"
+                alt="กิจกรรมค่ายยกระดับผลสัมฤทธิ์ทางการเรียนเทคโนโลยี"
+            >
+
+            <p>
+                <strong>กิจกรรมที่ 1</strong><br>
+                ได้เข้าร่วมกิจกรรม
+                "ค่ายยกระดับผลสัมฤทธิ์ทางการเรียนเทคโนโลยี"
+            </p>
+
+        </div>
+
+
+        <!-- กิจกรรมที่ 2 -->
+
+        <div class="activity">
+
+            <img
+                src="IMG_9037.jpg"
+                alt="การอบรมเชิงปฏิบัติการด้านความปลอดภัย"
+            >
+
+            <p>
+                <strong>กิจกรรมที่ 2</strong><br>
+                ได้ผ่านการอบรมเชิงปฏิบัติการเสริมทักษะประสบการณ์
+                และสมรรถนะด้านความปลอดภัยในหัวข้อ
+                "การฝึกอบรมตามหลักสูตรทักษะการเผชิญเหตุแผ่นดินไหว
+                และภัยพิบัติในสถานศึกษา"
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+        <h2 class="section-title">
+            ความสนใจในด้านการศึกษาต่อ
+        </h2>
+
+        <div class="university-grid">
+
+            <!-- มหาวิทยาลัย 1 -->
+
+            <div class="university-card">
+
+                <img
+                    src="IMG_9041.jpg"
+                    alt="คณะวิศวกรรมศาสตร์ มหาวิทยาลัยบูรพา"
+                >
+
+                <p>
+                    คณะวิศวกรรมศาสตร์ มหาวิทยาลัยบูรพา
+                </p>
+
+            </div>
+
+
+            <!-- มหาวิทยาลัย 2 -->
+
+            <div class="university-card">
+
+                <img
+                    src="IMG_9042.jpg"
+                    alt="คณะวิศวกรรมศาสตร์ มหาวิทยาลัยธรรมศาสตร์"
+                >
+
+                <p>
+                    คณะวิศวกรรมศาสตร์ มหาวิทยาลัยธรรมศาสตร์
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            ช่องทางการติดต่อ
+        </h2>
+
+        <div class="contact-box">
+
+            <div class="contact-item">
+
+                <div class="contact-icon">📞</div>
+
+                <div>
+                    <strong>เบอร์โทรศัพท์</strong><br>
+                    <a href="tel:0840807060">
+                        0840807060
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">👥</div>
+
+                <div>
+                    <strong>Facebook</strong><br>
+                    Auttapon Rangsom
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">✉️</div>
+
+                <div>
+                    <strong>Email</strong><br>
+                    <a href="mailto:vy1288213@gmail.com">
+                        vy1288213@gmail.com
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+        <p>
+            © 2026 Auttapon Rangsom | Portfolio
+        </p>
+    </footer>
+
+</body>
+</html>
 
